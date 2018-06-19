@@ -16,29 +16,8 @@ import Bar from './Bar';
 import Search from './Search';
 import Flex from './Flex';
 import Lista from './Lista';
-import Icon from "react-native-vector-icons/FontAwesome"
-import {DrawerNavigator} from 'react-navigation';
-import {StackNavigator} from 'react-navigation'
-import screenOne from './screenOne';
-import screenTwo from './screenTwo';
-import Router from './routes';
-const App = StackNavigator({
-  
-  screenTwo: {screen: screenTwo},
-})
-export default App;
-
-
-
-
-export default DrawerNavigator({
-
-  page1: {
-    screen: screenTwo
-  },
-}, {
-  drawerWidth: 300
-});
+import Icon from "react-native-vector-icons/FontAwesome";
+import MyApp from "./App"
 
 
 
@@ -122,7 +101,31 @@ export default class screenOne extends Component {
    
     return (
         <Container>
-                <Router/>
+
+          <Header style={{backgroundColor:"#76B486"}} 
+        iosBarStyle="light-content">
+            <Left>
+                <TouchableHighlight onPress={this.MyApp}>
+                    <Icon name="bars" style={styles.icon}/>
+                </TouchableHighlight>
+            </Left>
+            <Body style= {{alignItems: 'center'}}>
+                <Title style={{textAlign:'center', fontSize: 25}}>Explore</Title>
+            </Body>
+            <Right>
+                <TouchableHighlight onPress={this.first_function}>
+                    <Image
+                    style={styles.button}
+                    source={require('./src/camara.png')}/>
+                </TouchableHighlight>
+            </Right>
+
+        </Header>
+
+
+
+
+                
        
         
         <Search/>

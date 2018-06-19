@@ -11,7 +11,7 @@ import {
   Text,
   View
 } from 'react-native';
-import {StackNavigator} from 'react-navigation'
+import {StackNavigator, DrawerNavigator} from 'react-navigation'
 import screenOne from './screenOne';
 import screenTwo from './screenTwo';
 
@@ -19,14 +19,12 @@ const App = StackNavigator({
   screenOne: {screen: screenOne},
   screenTwo: {screen: screenTwo},
 })
-export default App;
 
 
-
-
-
-
-
+export default  MyApp = DrawerNavigator({
+  screenOne: {screen: screenOne},
+  screenTwo: {screen: screenTwo}
+})
 
 
 const styles = StyleSheet.create({
