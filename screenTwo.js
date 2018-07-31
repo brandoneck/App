@@ -63,7 +63,7 @@ export default class screenTwo extends Component {
 
 
      
-        <Image
+        <Imag
               style={styles.button}
               source={require('./src/star.png')}
           />
